@@ -1,0 +1,15 @@
+diff --git a/debian/rules b/debian/rules
+index 846995df5..4ae252308 100755
+--- a/debian/rules
++++ b/debian/rules
+@@ -21,6 +21,10 @@ include /usr/share/dpkg/default.mk
+ %:
+ 	dh $@
+ 
++# Garden Linux fix
++override_dh_gnome_clean:
++	:
++
+ DEB_CONFIGURE_EXTRA_FLAGS =
+ 
+ # Can be dropped when we switch to dh compat 14
